@@ -91,7 +91,6 @@ I'm a Full-Stack Developer passionate about building responsive, scalable, and u
     <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/robin-maurya/robin-maurya/output/github-contribution-grid-snake.svg" />
   </picture>
 </p>
-
 <!-- PROFILE_STATS_END -->
 
 ---
