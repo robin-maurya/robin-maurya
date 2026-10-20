@@ -2,6 +2,7 @@ name: Update profile stats
 
 on:
   push:
+    branches: [main]
   pull_request:
     types: [closed]
   schedule:
@@ -13,6 +14,7 @@ permissions:
 
 jobs:
   update-readme:
+    if: github.actor != 'github-actions[bot]'
     runs-on: ubuntu-latest
 
     steps:
@@ -39,7 +41,6 @@ jobs:
           text = readme.read_text()
 
           commits = os.environ.get("COMMITS", "0")
-
           block = f'''<!-- PROFILE_STATS_START -->
 <p align="center">
   <img src="https://img.shields.io/badge/Commits-{commits}-blue?style=for-the-badge&logo=github" alt="Total Commits" />
@@ -62,5 +63,5 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add README.md
-          git diff --cached --quiet || git commit -m "Update commit badge"
+          git diff --cached --quiet || git commit -m "Update GitHub stats"
           git push
