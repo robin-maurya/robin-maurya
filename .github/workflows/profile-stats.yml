@@ -1,0 +1,92 @@
+name: Update profile stats
+
+on:
+  push:
+  pull_request:
+    types: [closed]
+  schedule:
+    - cron: '0 * * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Get dynamic stats
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          COMMITS=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
+            "https://api.github.com/repos/robin-maurya/robin-maurya/commits?per_page=100" | jq 'length')
+
+          MERGED=$(curl -s -H "Authorization: Bearer $GH_TOKEN" \
+            "https://api.github.com/search/issues?q=repo:robin-maurya/robin-maurya+is:pr+is:merged" | jq '.total_count')
+
+          echo "COMMITS=$COMMITS" >> "$GITHUB_ENV"
+          echo "MERGED=$MERGED" >> "$GITHUB_ENV"
+
+      - name: Update README stats block
+        run: |
+          python - <<'PY'
+          import os
+          from pathlib import Path
+
+          readme = Path('README.md')
+          text = readme.read_text()
+
+          commits = os.environ.get('COMMITS', '0')
+          merged = os.environ.get('MERGED', '0')
+
+          block = f'''<!-- PROFILE_STATS_START -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Commits-{commits}-blue?style=for-the-badge&logo=github" alt="Total Commits" />
+  <img src="https://img.shields.io/badge/Merged%20PRs-{merged}-purple?style=for-the-badge&logo=githubactions" alt="Merged PRs" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=robin-maurya&show_icons=true&theme=tokyonight&hide_border=true" height="165" alt="GitHub statistics" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=robin-maurya&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="165" alt="Most used programming languages" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=robin-maurya&theme=tokyonight&hide_border=true" height="165" alt="GitHub contribution streak" />
+</p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/robin-maurya/robin-maurya/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/robin-maurya/robin-maurya/output/github-contribution-grid-snake.svg" />
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/robin-maurya/robin-maurya/output/github-contribution-grid-snake.svg" />
+  </picture>
+</p>
+<!-- PROFILE_STATS_END -->'''
+
+          start = text.find('<!-- PROFILE_STATS_START -->')
+          end = text.find('<!-- PROFILE_STATS_END -->')
+
+          if start != -1 and end != -1:
+              text = text[:start] + block + text[end + len('<!-- PROFILE_STATS_END -->'):]
+          else:
+              marker = '## 📊 GitHub Statistics\n'
+              insertion = marker + '\n' + block + '\n'
+              if marker in text:
+                  text = text.replace(marker, insertion, 1)
+              else:
+                  text += '\n' + insertion
+
+          readme.write_text(text)
+          PY
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md
+          git diff --cached --quiet || git commit -m "Update GitHub stats badges"
+          git push

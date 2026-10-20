@@ -2,7 +2,7 @@
 
 ### Full-Stack Developer | React.js • Next.js • TypeScript • Java • Spring Boot
 
-I'm a Full-Stack Developer passionate about building responsive, scalable, and user-friendly web applications. I work with modern frontend technologies like React.js, Next.js, and TypeScript, along with Java, Spring Boot, REST APIs, and MySQL to develop end-to-end web solutions. I focus on writing clean, maintainable code and creating meaningful digital experiences.
+I'm a Full-Stack Developer passionate about building responsive, scalable, and user-friendly web applications. I work with modern frontend technologies like React.js, Next.js, and TypeScript, along with backend technologies like Java and Spring Boot.
 
 - 🔭 **Currently working on:** Web application development and personal projects
 - 💻 **Frontend:** React.js, Next.js, JavaScript (ES6+), TypeScript, Redux, HTML5, CSS3
@@ -71,6 +71,12 @@ I'm a Full-Stack Developer passionate about building responsive, scalable, and u
 
 ## 📊 GitHub Statistics
 
+<!-- PROFILE_STATS_START -->
+<p align="center">
+  <img src="https://img.shields.io/badge/Commits-0-blue?style=for-the-badge&logo=github" alt="Total Commits" />
+  <img src="https://img.shields.io/badge/Merged%20PRs-0-purple?style=for-the-badge&logo=githubactions" alt="Merged PRs" />
+</p>
+
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=robin-maurya&show_icons=true&theme=tokyonight&hide_border=true" height="165" alt="GitHub statistics" />
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=robin-maurya&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="165" alt="Most used programming languages" />
@@ -79,6 +85,15 @@ I'm a Full-Stack Developer passionate about building responsive, scalable, and u
 <p align="center">
   <img src="https://streak-stats.demolab.com?user=robin-maurya&theme=tokyonight&hide_border=true" height="165" alt="GitHub contribution streak" />
 </p>
+
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/robin-maurya/robin-maurya/output/github-contribution-grid-snake-dark.svg" />
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/robin-maurya/robin-maurya/output/github-contribution-grid-snake.svg" />
+    <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/robin-maurya/robin-maurya/output/github-contribution-grid-snake.svg" />
+  </picture>
+</p>
+<!-- PROFILE_STATS_END -->
 
 ---
 
