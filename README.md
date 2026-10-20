@@ -1,80 +1,129 @@
-# Hi, I'm Robin Maurya, Software Developer
+# Hi 👋, I'm Robin Maurya
 
-### Full-Stack Developer | React.js | Next.js | TypeScript | Java | Spring Boot
+### Full-Stack Developer | React.js • Next.js • TypeScript • Java • Spring Boot
 
-I'm a Software Engineer at **Tata Consultancy Services (TCS)**, focused on building responsive, maintainable, and user-friendly web applications.
+I'm a Full-Stack Developer passionate about building responsive, scalable, and user-friendly web applications. I work with modern frontend technologies like React.js, Next.js, and TypeScript, along with Java, Spring Boot, REST APIs, and MySQL to develop end-to-end web solutions. I focus on writing clean, maintainable code and creating meaningful digital experiences.
 
-I specialize in modern frontend development using React.js, Next.js, JavaScript, and TypeScript, while expanding my expertise in Java, Spring Boot, REST APIs, and MySQL to build end-to-end full-stack applications.
-
-- 🔭 Working on modern web applications and full-stack development projects.
-- 🌱 Learning Java, Spring Boot, SQL, backend development, and software design fundamentals.
-- 💻 Practicing problem-solving, clean code, testing, and application development.
-- 🤝 Interested in meaningful open-source contributions and collaboration.
-- 🎯 Goal: Build scalable, reliable full-stack applications and contribute to real-world projects.
+- 🔭 **Currently working on:** Web application development and personal projects
+- 💻 **Frontend:** React.js, Next.js, JavaScript (ES6+), TypeScript, Redux, HTML5, CSS3
+- ⚙️ **Backend:** Java, Spring Boot, REST APIs
+- 🗄️ **Database:** MySQL
+- 🧪 **Testing:** Jest, React Testing Library
+- 🛠️ **Tools:** Git, GitHub, npm, Maven, VS Code, IntelliJ IDEA
+- 🎯 **Focus:** Full-stack development, clean code, and real-world applications
 
 ---
 
 ## 🛠️ Tech Stack
 
-### Frontend
-- React.js
-- Next.js
-- JavaScript (ES6+)
-- TypeScript
-- HTML5 & CSS3
-- Redux
-- Responsive Web Design
+### Frontend Development
 
-### Backend & Database
-- Java
-- Spring Boot
-- REST APIs
-- MySQL
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" height="40" alt="React.js" />
+  <img width="10" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" height="40" alt="Next.js" />
+  <img width="10" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" height="40" alt="TypeScript" />
+  <img width="10" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="40" alt="JavaScript" />
+  <img width="10" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" height="40" alt="HTML5" />
+  <img width="10" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" height="40" alt="CSS3" />
+  <img width="10" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg" height="40" alt="Redux" />
+  <img width="10" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" height="40" alt="Bootstrap" />
+</p>
 
-### Tools & Testing
-- Git & GitHub
+### Backend Development
+
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" height="40" alt="Java" />
+  <img width="10" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" height="40" alt="Spring Boot" />
+</p>
+
+### Database & Tools
+
+<p align="left">
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" height="40" alt="MySQL" />
+  <img width="10" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" height="40" alt="Git" />
+  <img width="10" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" height="40" alt="GitHub" />
+  <img width="10" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg" height="40" alt="npm" />
+  <img width="10" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/maven/maven-original.svg" height="40" alt="Maven" />
+  <img width="10" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" height="40" alt="VS Code" />
+  <img width="10" />
+  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg" height="40" alt="IntelliJ IDEA" />
+</p>
+
+### Testing
+
 - Jest
 - React Testing Library
-- VS Code
-- IntelliJ IDEA
+
+---
+
+## 📊 GitHub Statistics
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=robin-maurya&show_icons=true&theme=tokyonight&hide_border=true" height="165" alt="GitHub statistics" />
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=robin-maurya&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" height="165" alt="Most used programming languages" />
+</p>
+
+<p align="center">
+  <img src="https://streak-stats.demolab.com?user=robin-maurya&theme=tokyonight&hide_border=true" height="165" alt="GitHub contribution streak" />
+</p>
 
 ---
 
 ## 🚀 Featured Projects
 
-### 1. Personal Portfolio
+### 🌐 Personal Portfolio
 
-My developer portfolio showcasing my skills, professional experience, and projects.
+A personal portfolio showcasing my technical skills, experience, and projects.
 
-- 🌐 **Live Website:** [robin-maurya.vercel.app](https://robin-maurya.vercel.app/)
-- 💻 **Repository:** [robin-portfolio](https://github.com/robin-maurya/robin-portfolio)
+- **Live Website:** [robin-maurya.vercel.app](https://robin-maurya.vercel.app/)
+- **Source Code:** [robin-portfolio](https://github.com/robin-maurya/robin-portfolio)
 - **Tech Stack:** Next.js, React.js, TypeScript
 
-### 2. Java Learning Journey
+### ☕ Java Learning Repository
 
-A structured collection of Java concepts, examples, practice programs, and interview preparation.
+A structured collection of Java concepts, hands-on coding practice, and interview preparation.
 
-- 💻 **Repository:** [java-learning](https://github.com/robin-maurya/java-learning)
-- **Focus:** Core Java, Object-Oriented Programming, Generics, Lambda Expressions, Functional Interfaces, Streams, and interview preparation.
+- **Repository:** [java-learning](https://github.com/robin-maurya/java-learning)
+- **Focus Areas:** Core Java, OOP, Generics, Lambda Expressions, Functional Interfaces, and Streams
 
-### 3. Full-Stack Portfolio Backend
+### ⚙️ Portfolio Backend
 
-A backend project for handling portfolio contact form submissions and database integration.
+Backend development for portfolio contact form submissions with database integration.
 
-- **Tech Stack:** Java, Spring Boot, MySQL, REST APIs
-- **Focus:** Backend development, API integration, database connectivity, and application fundamentals.
-
----
-
+- **Repository:** [GitHub Repositories](https://github.com/robin-maurya)
+- **Tech Stack:** Java, Spring Boot, REST APIs, MySQL
 
 ---
 
-## 🤝 Let's Connect
+## 🤝 Connect With Me
 
-- **GitHub:** [@robin-maurya](https://github.com/robin-maurya)
-- **LinkedIn:** [Connect with me](https://www.linkedin.com/in/robin-maurya/)
-- **Portfolio:** [Visit my website](https://robin-maurya.vercel.app/)
+<p align="left">
+  <a href="https://www.linkedin.com/in/robin-maurya/" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn" />
+  </a>
+  <a href="https://github.com/robin-maurya" target="_blank">
+    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub" />
+  </a>
+  <a href="https://robin-maurya.vercel.app/" target="_blank">
+    <img src="https://img.shields.io/badge/Portfolio-2563EB?style=for-the-badge&logo=vercel&logoColor=white" alt="Portfolio" />
+  </a>
+</p>
 
 ---
 
-*Always learning, building, and improving — one commit at a time.* 🚀
+<p align="center">
+  <i>Building, learning, and improving — one commit at a time.</i>
+</p>
