@@ -71,10 +71,8 @@ I'm a Full-Stack Developer passionate about building responsive, scalable, and u
 
 ## 📊 GitHub Statistics
 
-<!-- PROFILE_STATS_START -->
 <p align="center">
   <img src="https://img.shields.io/badge/Commits-0-blue?style=for-the-badge&logo=github" alt="Total Commits" />
-  <img src="https://img.shields.io/badge/Merged%20PRs-0-purple?style=for-the-badge&logo=githubactions" alt="Merged PRs" />
 </p>
 
 <p align="center">
