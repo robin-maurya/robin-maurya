@@ -71,9 +71,11 @@ I'm a Full-Stack Developer passionate about building responsive, scalable, and u
 
 ## 📊 GitHub Statistics
 
+<!-- PROFILE_STATS_START -->
 <p align="center">
   <img src="https://img.shields.io/badge/Commits-0-blue?style=for-the-badge&logo=github" alt="Total Commits" />
 </p>
+<!-- PROFILE_STATS_END -->
 
 <p align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=robin-maurya&show_icons=true&theme=tokyonight&hide_border=true" height="165" alt="GitHub statistics" />
@@ -91,7 +93,6 @@ I'm a Full-Stack Developer passionate about building responsive, scalable, and u
     <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/robin-maurya/robin-maurya/output/github-contribution-grid-snake.svg" />
   </picture>
 </p>
-<!-- PROFILE_STATS_END -->
 
 ---
 

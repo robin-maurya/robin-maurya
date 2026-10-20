@@ -1,6 +1,9 @@
 name: Update profile stats
 
 on:
+  push:
+  pull_request:
+    types: [opened, synchronize, reopened]
   schedule:
     - cron: "0 * * * *"
   workflow_dispatch:
@@ -11,10 +14,16 @@ permissions:
 jobs:
   update-readme:
     runs-on: ubuntu-latest
+    concurrency:
+      group: profile-stats-${{ github.event.pull_request.head.ref || github.ref_name }}
+      cancel-in-progress: true
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+        with:
+          repository: ${{ github.event.pull_request.head.repo.full_name || github.repository }}
+          ref: ${{ github.event.pull_request.head.ref || github.ref_name }}
 
       - name: Get total commits
         env:
@@ -28,7 +37,8 @@ jobs:
               url,
               headers={
                   "Authorization": f"Bearer {os.environ['GH_TOKEN']}",
-                  "Accept": "application/vnd.github.cloak-preview"
+                  "Accept": "application/vnd.github+json",
+                  "X-GitHub-Api-Version": "2022-11-28"
               }
           )
 
@@ -50,32 +60,47 @@ jobs:
           text = readme.read_text()
 
           commits = os.environ.get("COMMITS", "0")
+          start_marker = "<!-- PROFILE_STATS_START -->"
+          end_marker = "<!-- PROFILE_STATS_END -->"
+          badge = f'''<p align="center">
+            <img src="https://img.shields.io/badge/Commits-{commits}-blue?style=for-the-badge&logo=github" alt="Total Commits" />
+          </p>'''
 
-          block = f'''<!-- PROFILE_STATS_START -->
-<p align="center">
-  <img src="https://img.shields.io/badge/Commits-{commits}-blue?style=for-the-badge&logo=github" alt="Total Commits" />
-</p>
-<!-- PROFILE_STATS_END -->'''
+          start = text.find(start_marker)
+          end = text.find(end_marker)
+          if start == -1 or end == -1 or start >= end:
+              raise SystemExit("README.md is missing valid PROFILE_STATS markers")
+          if text.count(start_marker) != 1 or text.count(end_marker) != 1:
+              raise SystemExit("README.md must contain exactly one pair of PROFILE_STATS markers")
 
-          start = text.find("<!-- PROFILE_STATS_START -->")
-          end = text.find("<!-- PROFILE_STATS_END -->")
-
-          if start != -1 and end != -1:
-              text = text[:start] + block + text[end + len("<!-- PROFILE_STATS_END -->"):]
-          else:
-              text += "\n" + block
+          content_start = start + len(start_marker)
+          text = text[:content_start] + "\n" + badge + "\n" + text[end:]
 
           readme.write_text(text)
           PY
 
-      - name: Commit and push changes
+      - name: Commit and push README update
+        if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+        env:
+          TARGET_BRANCH: ${{ github.event.pull_request.head.ref || github.ref_name }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md
+          git add -- README.md
           if git diff --cached --quiet; then
             echo "No changes to commit"
             exit 0
           fi
-          git commit -m "Update profile stats"
-          git push
+          git commit -m "chore: update profile commit stats"
+          for attempt in 1 2 3; do
+            if git push origin "HEAD:refs/heads/${TARGET_BRANCH}"; then
+              exit 0
+            fi
+
+            echo "Push attempt ${attempt} failed; syncing with origin/${TARGET_BRANCH}"
+            git fetch origin "${TARGET_BRANCH}"
+            git rebase FETCH_HEAD
+          done
+
+          echo "Unable to push README update after 3 attempts" >&2
+          exit 1
