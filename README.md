@@ -73,7 +73,7 @@ I'm a Full-Stack Developer passionate about building responsive, scalable, and u
 
 <!-- PROFILE_STATS_START -->
 <p align="center">
-  <img src="https://img.shields.io/badge/Commits-125-blue?style=for-the-badge&logo=github" alt="Total Commits" />
+  <img src="https://img.shields.io/badge/Commits-129-blue?style=for-the-badge&logo=github" alt="Total Commits" />
 </p>
 <!-- PROFILE_STATS_END -->
 
