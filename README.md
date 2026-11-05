@@ -78,8 +78,8 @@ I'm a Full-Stack Developer passionate about building responsive, scalable, and u
 <!-- PROFILE_STATS_END -->
 
 <p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=robin-maurya&show_icons=true&theme=tokyonight&hide_border=true&cache_seconds=3600" height="165" alt="GitHub statistics" />
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=robin-maurya&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&cache_seconds=3600" height="165" alt="Most used programming languages" />
+  <img src="https://github-stats-extended.vercel.app/api?username=robin-maurya&show_icons=true&theme=tokyonight&hide_border=true&cache_seconds=3600" height="165" alt="GitHub statistics" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=robin-maurya&layout=compact&theme=tokyonight&hide_border=true&langs_count=8&cache_seconds=3600" height="165" alt="Most used programming languages" />
 </p>
 
 <p align="center">
